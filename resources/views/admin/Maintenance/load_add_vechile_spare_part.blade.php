@@ -1,7 +1,7 @@
 @if(@isset($Vehicle_Maintenance) and !@empty($Vehicle_Maintenance) )
 @section("css")
-<link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 <form action="{{ route('Maintenance.add_vechile_spare_part',$Vehicle_Maintenance['id']) }}" method="post">

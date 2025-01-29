@@ -1,7 +1,7 @@
 @if(@isset($Vechile_Information) and !@empty($Vechile_Information) )
 @section("css")
-<link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 <form action="{{ route('Maintenance.add_traffic_accident',$Vechile_Information['id']) }}" method="post">

@@ -31,9 +31,9 @@
 	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 	
 	<%if @document.hljs == 'light':%>
-	<link rel="stylesheet" src="/css/highlight.default.min.css"/>
+	<link rel="stylesheet" href="/css/highlight.default.min.css"/>
 	<%else:%>
-	<link rel="stylesheet" src="/css/highlight.min.css"/>
+	<link rel="stylesheet" href="/css/highlight.min.css"/>
 	<%end%>
 </head>
 <body>
