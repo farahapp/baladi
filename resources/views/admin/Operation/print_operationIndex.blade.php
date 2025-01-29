@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title> بحث السائقين </title>
    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-   <link rel="stylesheet" href="{{ asset('/../assets/admin/css/bootstrap_rtl-v4.2.1/bootstrap.min.css')}}">
+   <link rel="stylesheet" src="{{ asset('/../assets/admin/css/bootstrap_rtl-v4.2.1/bootstrap.min.css')}}">
    <style>
       @media print {
          .hidden-print {

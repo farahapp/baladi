@@ -34,8 +34,8 @@ hljs: 	'light'
 <html dir="rtl" lang="ar"> ... </html>
 
 <!-- include the RTL css files-->
-<link rel="stylesheet" href="{PATH}/alertify.rtl.css">
-<link rel="stylesheet" href="{PATH}/themes/default.rtl.css">
+<link rel="stylesheet" src="{PATH}/alertify.rtl.css">
+<link rel="stylesheet" src="{PATH}/themes/default.rtl.css">
 
 <!-- include alertify script -->
 <script src="{PATH}/alertify.js"></script>
@@ -67,10 +67,10 @@ alertify.defaults.glossary.cancel = 'إلغاء';
 <pre>
 <code class="lang-html">
 <!-- include alertify.css -->
-<link rel="stylesheet" href="{PATH}/alertify.css">
+<link rel="stylesheet" src="{PATH}/alertify.css">
 
 <!-- include semantic ui theme  -->
-<link rel="stylesheet" href="{PATH}/themes/semantic.css">
+<link rel="stylesheet" src="{PATH}/themes/semantic.css">
 
 <!-- include alertify script -->
 <script src="{PATH}/alertify.js"></script>
@@ -100,10 +100,10 @@ alertify.defaults.theme.cancel = "ui black button";
 <pre>
 <code class="lang-html">
 <!-- include alertify.css -->
-<link rel="stylesheet" href="{PATH}/alertify.css">
+<link rel="stylesheet" src="{PATH}/alertify.css">
 
 <!-- include boostrap theme  -->
-<link rel="stylesheet" href="{PATH}/themes/bootstrap.css">
+<link rel="stylesheet" src="{PATH}/themes/bootstrap.css">
 
 <!-- include alertify script -->
 <script src="{PATH}/alertify.js"></script>

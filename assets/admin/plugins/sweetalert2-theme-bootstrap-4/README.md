@@ -16,7 +16,7 @@ With CSS:
 
 ```html
 <!-- Include the Bootstrap 4 theme -->
-<link rel="stylesheet" href="@sweetalert2/theme-bootstrap-4/bootstrap-4.css">
+<link rel="stylesheet" src="@sweetalert2/theme-bootstrap-4/bootstrap-4.css">
 
 <script src="sweetalert2/dist/sweetalert2.min.js"></script>
 ```

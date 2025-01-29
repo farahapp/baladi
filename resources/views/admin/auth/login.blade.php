@@ -10,14 +10,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Ionicons -->
   <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{ asset('/../assets/admin/fonts/ionicons/2.0.1/css/ionicons.min.css') }}">
+  <link rel="stylesheet" src="{{ asset('/../assets/admin/fonts/ionicons/2.0.1/css/ionicons.min.css') }}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ asset('/../assets/admin/dist/css/adminlte.min.css') }}">
+  <link rel="stylesheet" src="{{ asset('/../assets/admin/dist/css/adminlte.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="{{ asset('/../assets/admin/fonts/SansPro/SansPro.min.css') }}">
+  <link rel="stylesheet" src="{{ asset('/../assets/admin/fonts/SansPro/SansPro.min.css') }}">
 </head>
 @if (app()->getLocale()=='ar')
 <style>

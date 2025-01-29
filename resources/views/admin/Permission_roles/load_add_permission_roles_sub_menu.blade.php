@@ -1,7 +1,7 @@
 @if(@isset($permission_roles_main_menus) and !@empty($permission_roles_main_menus) )
 @section("css")
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" src="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 <form action="{{ route('permission_roles.add_permission_roles_sub_menu',$permission_roles_main_menus['id']) }}" method="post">
 @csrf

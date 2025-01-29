@@ -114,24 +114,24 @@ hljs: 	'light'
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/alertify.min.js"></script>
 
 <!-- CSS -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/alertify.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/alertify.min.css"/>
 <!-- Default theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/default.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/default.min.css"/>
 <!-- Semantic UI theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/semantic.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/semantic.min.css"/>
 <!-- Bootstrap theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/bootstrap.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/bootstrap.min.css"/>
 
 <!-- 
     RTL version
 -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/alertify.rtl.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/alertify.rtl.min.css"/>
 <!-- Default theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/default.rtl.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/default.rtl.min.css"/>
 <!-- Semantic UI theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/semantic.rtl.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/semantic.rtl.min.css"/>
 <!-- Bootstrap theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/bootstrap.rtl.min.css"/>
+<link rel="stylesheet" src="//cdn.jsdelivr.net/npm/alertifyjs@<%=@getPackage().version%>/build/css/themes/bootstrap.rtl.min.css"/>
 
 </code>
 </pre>		  
@@ -181,9 +181,9 @@ npm install alertifyjs --save
           <h3> <i class="fa fa-check"></i> Include CSS </h3>
 <pre>
 <code class="lang-html">&lt;!-- include the style --&gt;
-&lt;link rel="stylesheet" href="{PATH}/alertify.min.css" /&gt;
+&lt;link rel="stylesheet" src="{PATH}/alertify.min.css" /&gt;
 &lt;!-- include a theme --&gt;
-&lt;link rel="stylesheet" href="{PATH}/themes/default.min.css" /&gt;
+&lt;link rel="stylesheet" src="{PATH}/themes/default.min.css" /&gt;
 </code> 
 </pre>
 
