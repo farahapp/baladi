@@ -109,7 +109,7 @@ Edit
                   <label>     Apartment picture      </label>
                   <div class="image">
                      @if ($data['flat_image']!=null ||$data['flat_image']!="")
-                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['flat_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['flat_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['flat_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                      @endif
                      <button type="button" class="btn btn-sm btn-info" id="change_flat_image" style="width:100px;" value="flat_image">Select image </button>
@@ -180,7 +180,7 @@ Edit
 
 
 @section("script")
-<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

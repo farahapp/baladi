@@ -285,7 +285,7 @@
 
 
 @section('script')
-<script src="{{ asset('/../assets/admin/js/permission_sub_menues.js') }}"></script>
+<script src="{{ asset('assets/admin/js/permission_sub_menues.js') }}"></script>
 @endsection
 
 

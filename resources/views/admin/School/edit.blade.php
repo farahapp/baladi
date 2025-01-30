@@ -6,8 +6,8 @@
 بيانات إضافية  
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 @section('contentheaderactivelink')
 <a href="{{ route('Maintenance.index') }}">   المدرسة   </a>
@@ -119,9 +119,9 @@
                      @if ($data['sudanese_driving_license_Image']!=null ||$data['sudanese_driving_license_Image']!="")
 
                      @if (pathinfo($data['sudanese_driving_license_Image'], PATHINFO_EXTENSION) == 'pdf')
-                     <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}"></iframe><br/>
+                     <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}"></iframe><br/>
                      @else
-                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                      @endif
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['sudanese_driving_license_Image'] }}" style="width:50px;" value="sudanese_driving_license_Image">عرض </button>
                      @endif
@@ -143,7 +143,7 @@
             <label>     صورة   الرخصة القطرية    </label>
             <div class="image">
                @if ($data['qatary_driving_license_Image_image']!=null ||$data['qatary_driving_license_Image_image']!="")
-               <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['qatary_driving_license_Image_image'] }}" alt="صورة الرخصة القطرية" ><br/>
+               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['qatary_driving_license_Image_image'] }}" alt="صورة الرخصة القطرية" ><br/>
                <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['qatary_driving_license_Image_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                @endif 
                <button type="button" class="btn btn-sm btn-info" id="change_qatary_driving_license_Image_image" style="width:100px;" value="change_qatary_driving_license_Image_image">إختيار صورة</button>
@@ -218,7 +218,7 @@
 @endsection
 {{-- //////////////////////////////////////////////////// --}}
 @section("script")
-<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

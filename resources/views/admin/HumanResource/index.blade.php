@@ -13,8 +13,8 @@ show
 @endsection
 
 @section("css")
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('content')
@@ -114,7 +114,7 @@ show
       </div>
 
 
-      <div class="card-body" id="ajax_responce_serachDiv" style="background-size: cover; background-image: url('{{ asset('/../assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" id="ajax_responce_serachDiv" style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) and count($data)>0 )
          <main class="table">
             <section class="table__body">
@@ -146,7 +146,7 @@ show
                   {{-- للترتيب التنازلي نستخدم الدالة التحت
                   <td>{{ $data->firstItem() + ($data->count() - $loop->index)}}</td>  --}}
                   <td>{{ $info->driver_name }}</td>
-                  <td><img src="{{ asset('/../assets/admin/uploads').'/'.$info->driver_photo }}"></td>
+                  <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
                   <td>{{ $info->baladi_id }}</td>
 
                   <td>{{ $info->Nationalities->name }}</td>
@@ -222,8 +222,8 @@ show
 </div>
 @endsection
 @section("script")
-<script  src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script  src="{{ asset('/../assets/admin/js/human_resource.js') }}"> </script>
+<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('assets/admin/js/human_resource.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({
