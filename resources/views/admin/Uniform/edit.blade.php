@@ -3,10 +3,10 @@
 Guard
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -38,7 +38,7 @@ Deposit
 
       
 
-      <div class="card-body" id="driving_school_status_searchDiv"  style="background-size: cover; background-image: url('{{ secure_asset('assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" id="driving_school_status_searchDiv"  style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) )
     
          
@@ -48,7 +48,7 @@ Deposit
                <div class="form-group">
                @if ($data['driver_photo']!=null ||$data['driver_photo']!="")
                <img style="box-shadow: 0 .4rem .8rem #0005;
-        border-radius: .8rem;overflow: hidden;" class="custom_img"  alt="Avatar"  id="showImageView"  src="{{ secure_asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>                  <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:150px;" value="initial_contract_image">View image</button>
+        border-radius: .8rem;overflow: hidden;" class="custom_img"  alt="Avatar"  id="showImageView"  src="{{ asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>                  <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:150px;" value="initial_contract_image">View image</button>
                   @endif
             </div>
             <label>{{ old('driver_name',$data['driver_name']) }}</label>
@@ -129,7 +129,7 @@ Deposit
                border-radius:5px;padding:16px;margin:6px"
                align="center;">
                {{-- <img class="custom_img" id="showImageView"  src="{{  $raw['image'] }}"  ><br/> --}}
-               <img class="custom_img" id="showImageView" src="{{ secure_asset('assets/admin/uploads').'/'.$raw['image'] }}" alt="صورة  " ><br/>
+               <img class="custom_img" id="showImageView" src="{{ asset('assets/admin/uploads').'/'.$raw['image'] }}" alt="صورة  " ><br/>
                <h4 class="text-info">
                   {{ $raw['name'] }}
                </h4>
@@ -199,9 +199,9 @@ Deposit
 @endsection
 
 @section("script")
-<script  src="{{ secure_asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script  src="{{ secure_asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
-<script src="{{ secure_asset('assets/admin/js/school.js') }}"></script>
+<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/js/school.js') }}"></script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

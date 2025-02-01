@@ -6,10 +6,10 @@ Quality
 Daily report 
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
 @endsection
 @section('contentheaderactivelink')
 <a href="{{ route('Maintenance.index') }}">Daily report</a>
@@ -82,7 +82,7 @@ show
 
       </div>
 
-      <div class="card-body" id="daily_report_ajax_serachDiv" style="background-size: cover; background-image: url('{{ secure_asset('assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" id="daily_report_ajax_serachDiv" style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) and count($data)>0 )
          @foreach ( $data as $info )
          <main class="table">
@@ -287,9 +287,9 @@ show
 
 
 @section('script')
-<script  src="{{ secure_asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script  src="{{ secure_asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
-<script src="{{ secure_asset('assets/admin/js/daily_report.js') }}"></script>
+<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/js/daily_report.js') }}"></script>
 
 
 <script>

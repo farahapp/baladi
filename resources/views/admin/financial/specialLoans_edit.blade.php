@@ -3,8 +3,8 @@
 Employee Data
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 @section('contentheader')
 Drivers List
@@ -127,7 +127,7 @@ Loan request
                      <label>Loan signature image</label><br/>
                      <div class="image">
                      @if ($specialLoans['loan_image']!=null ||$specialLoans['loan_image']!="")
-                     <img class="custom_img" src="{{ secure_asset('assets/admin/uploads').'/'.$specialLoans['loan_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$specialLoans['loan_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $specialLoans['loan_image'] }}" style="width:50px;" value="loan_image">عرض </button>
                      @endif
                      <button type="button" class="btn btn-sm btn-info" id="change_loan_image" style="width:100px;" value="loan_image" >Select image</button>
@@ -142,7 +142,7 @@ Loan request
             @else 
             <label>Loan signature image	</label><br/>
             @if ($specialLoans['loan_image']!=null ||$specialLoans['loan_image']!="")
-                     <img class="custom_img" src="{{ secure_asset('assets/admin/uploads').'/'.$specialLoans['loan_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$specialLoans['loan_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
                    @else
              @endif
 
@@ -213,7 +213,7 @@ Loan request
 @endsection
 
 @section("script")
-<script src="{{ secure_asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({
