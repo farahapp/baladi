@@ -84,7 +84,7 @@ Add
             <label>     Apartment picture      </label>
             <div class="image">
                @if ($data['flat_image']!=null ||$data['flat_image']!="")
-               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['flat_image'] }}" alt="الصورة الشخصية للسائق" >
+               <img class="custom_img" src="{{ secure_asset('assets/admin/uploads').'/'.$data['flat_image'] }}" alt="الصورة الشخصية للسائق" >
                @endif
                <button type="button" class="btn btn-sm btn-info" id="change_flat_image" value="flat_image">Select image</button>
                <button type="button" class="btn btn-sm btn-danger" style="display: none;" id="cancel_flat_image">Cancel </button>

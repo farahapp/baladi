@@ -24,8 +24,8 @@
                {{-- للترتيب التنازلي نستخدم الدالة التحت
                <td>{{ $data->firstItem() + ($data->count() - $loop->index)}}</td>  --}}
                <td>{{ $info->driver_name }}</td>
-               {{-- <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}" width="50" class="img-thumbnail rounded-circle"></td> --}}
-               <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
+               {{-- <td><img src="{{ secure_asset('assets/admin/uploads').'/'.$info->driver_photo }}" width="50" class="img-thumbnail rounded-circle"></td> --}}
+               <td><img src="{{ secure_asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
                <td>{{ $info->baladi_id }}</td>
 
                <td><strong>{{ $info->Nationalities->name }}</strong></td>

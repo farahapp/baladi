@@ -1,7 +1,7 @@
 @if(@isset($VehicleAccident) and !@empty($VehicleAccident) )
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 <form action="{{ route('Maintenance.add_traffic_accident_parts',$VehicleAccident['id']) }}" method="post">
@@ -44,7 +44,7 @@
 @else
 <p class="bg-danger text-center"> Sorry, there is no data to display.</p>
 @section("script")
-<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ secure_asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
 

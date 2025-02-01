@@ -17,7 +17,7 @@
       @foreach ( $data as $info )
       <tr>
          <td>{{ $info->driver_name }}</td>
-         <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
+         <td><img src="{{ secure_asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
 
 
             {{-- <td 

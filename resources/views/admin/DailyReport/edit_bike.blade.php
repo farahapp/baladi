@@ -6,8 +6,8 @@
 السيارات  
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 @section('contentheaderactivelink')
 <a href="{{ route('Maintenance.index') }}">   السيارات   </a>
@@ -164,7 +164,7 @@
             <label>     صورة ترخيص المركبة     </label>
             <div class="image">
                @if ($data['Vechile_Information']['vechile_registeration_image'] !=null ||$data['Vechile_Information']['vechile_registeration_image'] !="")
-               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['Vechile_Information']['vechile_registeration_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+               <img class="custom_img" src="{{ secure_asset('assets/admin/uploads').'/'.$data['Vechile_Information']['vechile_registeration_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
                <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ old('vechile_registeration_image',$data['Vechile_Information']['vechile_registeration_image']) }}"  style="width:50px;" value="initial_contract_image">عرض </button>
                @endif
                <button type="button" class="btn btn-sm btn-info" id="change_vechile_registeration_image" style="width:100px;" value="vechile_registeration_image">إختيار صورة</button>
@@ -191,7 +191,7 @@
       <label>     صورة المركبة      </label>
       <div class="image">
          @if ($data['Vechile_Information']['vechile_image'] !=null ||$data['Vechile_Information']['vechile_image'] !="")
-         <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['Vechile_Information']['vechile_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+         <img class="custom_img" src="{{ secure_asset('assets/admin/uploads').'/'.$data['Vechile_Information']['vechile_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
          <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ old('vechile_image',$data['Vechile_Information']['vechile_image']) }}"  style="width:50px;" value="initial_contract_image">عرض </button>
          @endif
          <button type="button" class="btn btn-sm btn-info" id="change_vechile_image" style="width:100px;" value="vechile_image">إختيار صورة</button>
@@ -257,7 +257,7 @@
 @endsection
 {{-- //////////////////////////////////////////////////// --}}
 @section("script")
-<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ secure_asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({
