@@ -55,9 +55,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://baladi-production.up.railway.app'),
+    'url' => env('APP_URL', 'http://baladi-production.up.railway.app'),
 
-    'asset_url' => env('ASSET_URL','https://'),
+    'asset_url' => env('ASSET_URL',''),
 
     /*
     |--------------------------------------------------------------------------
