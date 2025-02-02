@@ -18,12 +18,12 @@ class AuthController extends Controller
     
     function token(Request $request) {
         $request->validate([
-            'driver_residency_permit_id' =>'required',
+            'baladi_id' =>'required',
             'password' =>'required',
             'device_name' =>'required',
         ]);
 
-        $user = Employee::where('driver_residency_permit_id',$request->driver_residency_permit_id)->first();
+        $user = Employee::where('baladi_id',$request->baladi_id)->first();
 
        // if(!$user || $request->driver_quater_tel != $user->driver_quater_tel){
             if(!$user || $request->password != "admin"){
@@ -75,11 +75,11 @@ class AuthController extends Controller
     function login(LoginUserRequestAPI $request){
         $request->validated($request->all());
 
-        if (!Auth::attempt([$request->only('driver_residency_permit_id','password')])) {
+        if (!Auth::attempt([$request->only('baladi_id','password')])) {
             return $this->error('','Credentials do not match', 401);
         }
 
-        $user = Employee::where('driver_residency_permit_id',$request->driver_residency_permit_id)->first();
+        $user = Employee::where('baladi_id',$request->baladi_id)->first();
 
         return $this->success([
             'user' => $user,
