@@ -3,8 +3,8 @@
 بيانات الموظفين
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -125,9 +125,9 @@
                        @if ($data['post_pay_pill_image']!=null ||$data['post_pay_pill_image']!="")
   
                        @if (pathinfo($data['post_pay_pill_image'], PATHINFO_EXTENSION) == 'pdf')
-                       <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}"></iframe><br/>
+                       <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}"></iframe><br/>
                        @else
-                       <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                       <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                        @endif
                        <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['post_pay_pill_image'] }}" style="width:50px;" value="post_pay_pill_image">عرض </button>
                        @endif
@@ -152,7 +152,7 @@
             <div class="form-group">
                <label>   الصورة الشخصية للسائق</label>
                @if ($data['driver_photo']!=null ||$data['driver_photo']!="")
-                  <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                  <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
                   <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:150px;" value="initial_contract_image">عرض </button>
                   @endif
             </div>
@@ -301,7 +301,7 @@
 
 
 @section("script")
-<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

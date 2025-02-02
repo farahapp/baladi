@@ -134,7 +134,7 @@
 </div>
 @endsection
 @section("script")
-<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
 
 $(document).on('change','#does_has_ateendance',function(e){

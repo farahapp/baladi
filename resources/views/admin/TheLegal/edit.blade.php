@@ -3,8 +3,8 @@
 بيانات الموظفين
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -163,7 +163,7 @@
                <label>     صورة توقيع العقد المبدئي    </label>
                <div class="image">
                   @if ($data['initial_contract_image']!=null ||$data['initial_contract_image']!="")
-                  <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['initial_contract_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                  <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['initial_contract_image'] }}" alt="الصورة الشخصية للسائق" ><br/>
                   <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['initial_contract_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                   @endif 
                   <button type="button" class="btn btn-sm btn-info" id="change_initial_contract_image" style="width:100px;" value="initial_contract_image">إختيار صورة</button>
@@ -185,9 +185,9 @@
             @if ($data['initial_contract_image']!=null ||$data['initial_contract_image']!="")
    
             @if (pathinfo($data['initial_contract_image'], PATHINFO_EXTENSION) == 'pdf')
-            <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['initial_contract_image'] }}"></iframe><br/>
+            <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['initial_contract_image'] }}"></iframe><br/>
             @else
-            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['initial_contract_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['initial_contract_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
             @endif
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['initial_contract_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
             @endif
@@ -205,7 +205,7 @@
             <div class="form-group">
                <label>   الصورة الشخصية للسائق</label>
                @if ($data['driver_photo']!=null ||$data['driver_photo']!="")
-                  <img class="custom_img"  id="showImageView"  src="{{ asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                  <img class="custom_img"  id="showImageView"  src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
                   <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:150px;" value="initial_contract_image">عرض الصورة</button>
                   @endif
             </div>
@@ -284,7 +284,7 @@
             <label>     صورة توقيع اقرار تسليم الجواز   </label>
             <div class="image">
                @if ($data['give_passport_image']!=null ||$data['give_passport_image']!="")
-               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['give_passport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+               <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['give_passport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['give_passport_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                @endif
                <button type="button" class="btn btn-sm btn-info" id="change_give_passport_image" style="width:100px;" value="give_passport_image" >اختيار صورة</button>
@@ -305,9 +305,9 @@
             @if ($data['give_passport_image']!=null ||$data['give_passport_image']!="")
    
             @if (pathinfo($data['give_passport_image'], PATHINFO_EXTENSION) == 'pdf')
-            <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['give_passport_image'] }}"></iframe><br/>
+            <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['give_passport_image'] }}"></iframe><br/>
             @else
-            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['give_passport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['give_passport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
             @endif
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['give_passport_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
             @endif
@@ -339,7 +339,7 @@
          <label>     صورة توقيع العقد  الرئيسي    </label>
          <div class="image">
             @if ($data['isSigningMainContractImage']!=null ||$data['isSigningMainContractImage']!="")
-            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningMainContractImage'] }}" alt="صورة توقيع العقد  الرئيسي" ><br/>
+            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningMainContractImage'] }}" alt="صورة توقيع العقد  الرئيسي" ><br/>
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['isSigningMainContractImage'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
             @endif
             <button type="button" class="btn btn-sm btn-info" id="change_isSigningMainContractImage" style="width:100px;" value="isSigningMainContractImage" >اختيار صورة</button>
@@ -360,9 +360,9 @@
             @if ($data['isSigningMainContractImage']!=null ||$data['isSigningMainContractImage']!="")
    
             @if (pathinfo($data['isSigningMainContractImage'], PATHINFO_EXTENSION) == 'pdf')
-            <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningMainContractImage'] }}"></iframe><br/>
+            <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningMainContractImage'] }}"></iframe><br/>
             @else
-            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningMainContractImage'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningMainContractImage'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
             @endif
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['isSigningMainContractImage'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
             @endif
@@ -401,7 +401,7 @@
             <label>     صورة توقيع المديونية    </label>
             <div class="image">
                @if ($data['SigningFullFinancialDebt_Image']!=null ||$data['SigningFullFinancialDebt_Image']!="")
-               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['SigningFullFinancialDebt_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+               <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['SigningFullFinancialDebt_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['SigningFullFinancialDebt_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                @endif
                <button type="button" class="btn btn-sm btn-info" id="change_SigningFullFinancialDebt_Image" style="width:100px;" value="SigningFullFinancialDebt_Image" >اختيار صورة</button>
@@ -421,9 +421,9 @@
                @if ($data['SigningFullFinancialDebt_Image']!=null ||$data['SigningFullFinancialDebt_Image']!="")
       
                @if (pathinfo($data['SigningFullFinancialDebt_Image'], PATHINFO_EXTENSION) == 'pdf')
-               <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['SigningFullFinancialDebt_Image'] }}"></iframe><br/>
+               <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['SigningFullFinancialDebt_Image'] }}"></iframe><br/>
                @else
-               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['SigningFullFinancialDebt_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+               <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['SigningFullFinancialDebt_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                @endif
                <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['SigningFullFinancialDebt_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                @endif
@@ -457,7 +457,7 @@
                   <label>     صورة توقيع الشرط الجزائي    </label>
                   <div class="image">
                      @if ($data['isSigningPenaltyClause_Image']!=null ||$data['isSigningPenaltyClause_Image']!="")
-                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningPenaltyClause_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningPenaltyClause_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['isSigningPenaltyClause_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                      @endif
                      <button type="button" class="btn btn-sm btn-info" id="change_isSigningPenaltyClause_Image" style="width:100px;" value="isSigningPenaltyClause_Image" >اختيار صورة</button>
@@ -477,9 +477,9 @@
                      @if ($data['isSigningPenaltyClause_Image']!=null ||$data['isSigningPenaltyClause_Image']!="")
             
                      @if (pathinfo($data['isSigningPenaltyClause_Image'], PATHINFO_EXTENSION) == 'pdf')
-                     <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningPenaltyClause_Image'] }}"></iframe><br/>
+                     <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningPenaltyClause_Image'] }}"></iframe><br/>
                      @else
-                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningPenaltyClause_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningPenaltyClause_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                      @endif
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['isSigningPenaltyClause_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                      @endif
@@ -516,7 +516,7 @@
          <label>     صورة توقيع شيك المديونية    </label>
          <div class="image">
             @if ($data['SigningFullFinancialDebtCheck_Image']!=null ||$data['SigningFullFinancialDebtCheck_Image']!="")
-            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['SigningFullFinancialDebtCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['SigningFullFinancialDebtCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['SigningFullFinancialDebtCheck_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
             @endif
             <button type="button" class="btn btn-sm btn-info" id="change_SigningFullFinancialDebtCheck_Image" style="width:100px;" value="SigningFullFinancialDebt_Image" >اختيار صورة</button>
@@ -536,9 +536,9 @@
             @if ($data['SigningFullFinancialDebtCheck_Image']!=null ||$data['SigningFullFinancialDebtCheck_Image']!="")
    
             @if (pathinfo($data['SigningFullFinancialDebtCheck_Image'], PATHINFO_EXTENSION) == 'pdf')
-            <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['SigningFullFinancialDebtCheck_Image'] }}"></iframe><br/>
+            <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['SigningFullFinancialDebtCheck_Image'] }}"></iframe><br/>
             @else
-            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['SigningFullFinancialDebtCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['SigningFullFinancialDebtCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
             @endif
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['SigningFullFinancialDebtCheck_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
             @endif
@@ -576,7 +576,7 @@
       <label>     صورة توقيع شيك الشرط الجزائي    </label>
       <div class="image">
          @if ($data['isSigningPenaltyClauseCheck_Image']!=null ||$data['isSigningPenaltyClauseCheck_Image']!="")
-         <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningPenaltyClauseCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+         <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningPenaltyClauseCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
          <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['isSigningPenaltyClauseCheck_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
          @endif
          <button type="button" class="btn btn-sm btn-info" id="change_isSigningPenaltyClauseCheck_Image" style="width:100px;" value="isSigningPenaltyClauseCheck_Image" >اختيار صورة</button>
@@ -596,9 +596,9 @@
          @if ($data['isSigningPenaltyClauseCheck_Image']!=null ||$data['isSigningPenaltyClauseCheck_Image']!="")
 
          @if (pathinfo($data['isSigningPenaltyClauseCheck_Image'], PATHINFO_EXTENSION) == 'pdf')
-         <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningPenaltyClauseCheck_Image'] }}"></iframe><br/>
+         <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningPenaltyClauseCheck_Image'] }}"></iframe><br/>
          @else
-         <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['isSigningPenaltyClauseCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+         <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['isSigningPenaltyClauseCheck_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
          @endif
          <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['isSigningPenaltyClauseCheck_Image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
          @endif
@@ -676,7 +676,7 @@
 
 
 @section("script")
-<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

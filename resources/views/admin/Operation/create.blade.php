@@ -3,8 +3,8 @@
 بيانات الموظفين
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -240,7 +240,7 @@
                   <label>     صورة جواز السفر  </label>
                   <div class="image">
                      @if ($data['driver_pasport_image']!=null ||$data['driver_pasport_image']!="")
-                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_pasport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_pasport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_pasport_image'] }}" style="width:50px;" value="driver_pasport_image">عرض </button>
                      @endif
                      <button type="button" class="btn btn-sm btn-info" id="change_driver_pasport_image" style="width:100px;" value="driver_pasport_image" >اختيار صورة</button>
@@ -659,7 +659,7 @@
 
 
 @section("script")
-<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

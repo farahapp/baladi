@@ -19,7 +19,7 @@ show
             <a href="{{ route('branches.create') }}" class="btn btn-sm btn-warning">Add New</a>
          </h3>
       </div>
-      <div class="card-body" style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" style="background-size: cover; background-image: url('{{ asset('/../assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) )
          <main class="table">
             <section class="table__body">

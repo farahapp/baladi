@@ -3,8 +3,8 @@
 بيانات الموظفين
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -101,7 +101,7 @@
             <div class="form-group">
                <label>   الصورة الشخصية للسائق</label>
                @if ($data['driver_photo']!=null ||$data['driver_photo']!="")
-                  <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                  <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
                   <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:150px;" value="initial_contract_image">عرض </button>
                   @endif
             </div>
@@ -136,7 +136,7 @@
             <label>     صورة   الرخصة القطرية    </label>
             <div class="image">
                @if ($data['qatary_driving_license_Image_image']!=null ||$data['qatary_driving_license_Image_image']!="")
-               <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['qatary_driving_license_Image_image'] }}" alt="صورة الرخصة القطرية" ><br/>
+               <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['qatary_driving_license_Image_image'] }}" alt="صورة الرخصة القطرية" ><br/>
                <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['qatary_driving_license_Image_image'] }}" style="width:50px;" value="initial_contract_image">عرض </button>
                @endif 
                <button type="button" class="btn btn-sm btn-info" id="change_qatary_driving_license_Image_image" style="width:100px;" value="change_qatary_driving_license_Image_image">إختيار صورة</button>
@@ -379,7 +379,7 @@
 
 
 @section("script")
-<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

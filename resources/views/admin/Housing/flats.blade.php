@@ -19,7 +19,7 @@ show
             <a href="{{ route('Housing.flatscreate') }}" class="btn btn-sm btn-success">Add a new apartment</a>
          </h3>
       </div>
-      <div class="card-body" id="ajax_responce_serachDiv" style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" id="ajax_responce_serachDiv" style="background-size: cover; background-image: url('{{ asset('/../assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) and count($data)>0 )
          <main class="table">
             <section class="table__body">

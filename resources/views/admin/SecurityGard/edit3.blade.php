@@ -3,10 +3,10 @@
 الجودة
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -63,7 +63,7 @@
                <div class="col-md-12" style="text-align: center">
                   <div class="form-group">
                      @if ($data['driver_photo']!=null ||$data['driver_photo']!="")
-                        <img class="custom_img"  alt="Avatar"  id="showImageView"  src="{{ asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                        <img class="custom_img"  alt="Avatar"  id="showImageView"  src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
                         <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:150px;" value="initial_contract_image">عرض الصورة</button>
                         @endif
                   </div>
@@ -160,9 +160,9 @@
 @endsection
 
 @section("script")
-<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script  src="{{ asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
-<script src="{{ asset('assets/admin/js/school.js') }}"></script>
+<script  src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('/../assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/js/school.js') }}"></script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

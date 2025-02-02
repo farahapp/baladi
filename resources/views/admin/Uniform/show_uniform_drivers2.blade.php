@@ -6,10 +6,10 @@ Guard
 Guard 
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
 @endsection
 @section('contentheaderactivelink')
 <a href="{{ route('SecurityGuard_Receive.index') }}">     Drivers</a>
@@ -58,7 +58,7 @@ Guard
 
 
 
-      <div class="card-body" id="ajax_responce_serachDiv" style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" id="ajax_responce_serachDiv" style="background-size: cover; background-image: url('{{ asset('/../assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) and count($data)>0 )
          {{-- <table id="example2" class="table table-bordered table-hover"> --}}
             <main class="table">
@@ -85,8 +85,8 @@ Guard
                            {{-- للترتيب التنازلي نستخدم الدالة التحت
                            <td>{{ $data->firstItem() + ($data->count() - $loop->index)}}</td>  --}}
                            <td>{{ $info->driver_name }}</td>
-                           {{-- <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}" width="50" class="img-thumbnail rounded-circle"></td> --}}
-                           <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
+                           {{-- <td><img src="{{ asset('/../assets/admin/uploads').'/'.$info->driver_photo }}" width="50" class="img-thumbnail rounded-circle"></td> --}}
+                           <td><img src="{{ asset('/../assets/admin/uploads').'/'.$info->driver_photo }}"></td>
                            <td>{{ $info->baladi_id }}</td>
          
                            <td><strong>{{ $info->Nationalities->name }}</strong></td>
@@ -241,10 +241,10 @@ Guard
 </div>
 @endsection
 @section("script")
-<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script  src="{{ asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
-{{-- <script src="{{ asset('assets/admin/js/security_guard.js') }}"></script> --}}
-<script src="{{ asset('assets/admin/js/show_unform_drivers.js') }}"></script>
+<script  src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('/../assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
+{{-- <script src="{{ asset('/../assets/admin/js/security_guard.js') }}"></script> --}}
+<script src="{{ asset('/../assets/admin/js/show_unform_drivers.js') }}"></script>
 
 <script>
    //Initialize Select2 Elements

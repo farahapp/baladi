@@ -6,10 +6,10 @@
 جدول المحاضرات  
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
 @endsection
 
 @section('contentheaderactivelink')
@@ -54,7 +54,7 @@
 
 
 
-<script  src="{{ asset('assets/admin/plugins/fullcal/dist/index.global.min.js') }}"  defer> </script>
+<script  src="{{ asset('/../assets/admin/plugins/fullcal/dist/index.global.min.js') }}"  defer> </script>
 
 {{-- <script type="text/javascript">
 

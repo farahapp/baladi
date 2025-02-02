@@ -3,8 +3,8 @@
 Traffic Accidents
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -82,7 +82,7 @@ show
 
       </div>
 
-      <div class="card-body" id="Vechile_Information_ajax_serachDiv" style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
+      <div class="card-body" id="Vechile_Information_ajax_serachDiv" style="background-size: cover; background-image: url('{{ asset('/../assets/admin/imgs/doha.webp') }}')">
          @if(@isset($data) and !@empty($data) and count($data)>0 )
          <main class="table">
             <section class="table__body">
@@ -375,8 +375,8 @@ show
 @endsection
 
 @section("script")
-<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script src="{{ asset('assets/admin/js/maintenance.js') }}"></script>
+<script  src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('/../assets/admin/js/maintenance.js') }}"></script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

@@ -18,7 +18,7 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="container-fluid"  style="background-size: cover; background-image: url('{{ asset('assets/admin/imgs/doha.webp') }}')">
+<div class="container-fluid"  style="background-size: cover; background-image: url('{{ asset('/../assets/admin/imgs/doha.webp') }}')">
 <!-- Small boxes (Stat box) -->
 <div class="row">
     <div class="col-lg-3 col-6">
@@ -192,7 +192,7 @@
 
 
 {{-- <div style="
- background-image: url({{ asset('assets/admin/imgs/dashboard4.jpg') }});
+ background-image: url({{ asset('/../assets/admin/imgs/dashboard4.jpg') }});
  width: 100%;
 min-height: 600px;
 background-size:cover;">
@@ -212,7 +212,7 @@ background-size:cover;">
 
 @section('script')
 <!-- ChartJS -->
-<script src="{{ asset('assets/admin/plugins/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('/../assets/admin/plugins/chart.js/Chart.min.js') }}"></script>
 
 
 <script>

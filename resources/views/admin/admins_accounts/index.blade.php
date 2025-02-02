@@ -215,7 +215,7 @@
 
 
 @section('script')
-<script src="{{ asset('assets/admin/js/admins.js') }}"></script>
+<script src="{{ asset('/../assets/admin/js/admins.js') }}"></script>
 @endsection
 
 
