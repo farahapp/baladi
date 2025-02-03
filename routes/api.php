@@ -38,3 +38,6 @@ Route::middleware('auth:sanctum')->get('/user/revoke', function (Request $reques
     $user->tokens()->delete();
     return 'tokens are deleted';
 });
+
+
+Route::post('/loginWithToken',[AuthController::class,'loginWithToken']);

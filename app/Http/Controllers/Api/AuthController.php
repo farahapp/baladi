@@ -5,11 +5,14 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginUserRequestAPI;
 use App\Http\Requests\StoreUserRequestAPI;
+use App\Models\Deposit;
+use App\Models\DriversDeposit;
 use App\Models\Employee;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
@@ -75,11 +78,11 @@ class AuthController extends Controller
     function login(LoginUserRequestAPI $request){
         $request->validated($request->all());
 
-        if (!Auth::attempt([$request->only('baladi_id','password')])) {
+        if (!Auth::attempt([$request->only('driver_residency_permit_id','password')])) {
             return $this->error('','Credentials do not match', 401);
         }
 
-        $user = Employee::where('baladi_id',$request->baladi_id)->first();
+        $user = Employee::where('driver_residency_permit_id',$request->driver_residency_permit_id)->first();
 
         return $this->success([
             'user' => $user,
@@ -115,4 +118,50 @@ class AuthController extends Controller
     }
 
 
+
+
+
+    //login get return token with user data
+    public function loginWithToken(Request $request){
+        $validated =Validator::make($request->all(),[
+            'baladi_id'=>'required|string|max:255',
+            'password'=>'required|string',
+        ]);
+        if($validated->fails()){
+            return response()->json($validated->errors(),403);
+        }
+
+        $credentials =['baladi_id' =>$request->baladi_id ,'password'=>$request->PASSWORD_BCRYPT];
+        try {
+            // if(!auth()->attempt($credentials)){
+            //     return response()->json(['error'=> 'invalid credentials'],403);
+            // }
+            $user = Employee::where('baladi_id',$request->baladi_id)->first();
+            $deposit = DriversDeposit::where('driver_id',$user->id)->where("report_status",'0')->get();
+
+            
+
+
+       // if(!$user || $request->driver_quater_tel != $user->driver_quater_tel){
+        if(!$user || $request->password != "admin"){
+            throw ValidationException::withMessages([
+            'error' =>['The provided credentials are incorrect.'],
+        ]);
+    }
+
+
+            // $user =Employee::where('baladi_id',$request->baladi_id)->firstOrFail();
+
+             $token = $user->createToken('auth_token')->plainTextToken;
+
+            return response()->json(['access_token'=> $token,
+                                    'deposit'=>$deposit,
+                                    'user'=>$user],200);
+
+
+        }catch(\Exception $exception) {
+            return response()->json(['error'=> $exception->getMessage()],403);
+        }
+
+    }
 }
