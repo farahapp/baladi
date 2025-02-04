@@ -118,6 +118,16 @@ class AuthController extends Controller
     }
 
 
+    function getUserData(Request $request){
+        $token = $request->bearerToken();
+        $user = $request->user();
+        $deposit = DriversDeposit::where('driver_id',$user->id)->where("report_status",'0')->get();
+
+        return response()->json(['access_token'=> $token,
+        'deposit'=>$deposit,
+        'user'=>$user],200);
+        
+    }
 
 
 
