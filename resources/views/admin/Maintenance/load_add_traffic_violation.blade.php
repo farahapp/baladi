@@ -7,6 +7,19 @@
 <form action="{{ route('Maintenance.add_traffic_violation',$Vechile_Information['id']) }}" method="post">
 @csrf
 <div class="row">
+
+
+   <div class="col-md-4">
+      <div class="form-group">
+         <label>     violation Driver </label>
+         <input  type="text" name="driver" id="driver" class="form-control" value="{{ old('driver') }}" placeholder="violation Driver"  >
+         @error('driver')
+         <span class="text-danger">{{ $message }}</span> 
+         @enderror
+      </div>
+   </div>
+
+
 <div class="col-md-4">
    <div class="form-group">
       <label>       violation Name  </label>

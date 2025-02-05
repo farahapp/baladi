@@ -19,6 +19,17 @@
    </div>
 </div>
 
+<div class="col-md-4">
+   <div class="form-group">
+      <label>     Accident Driver </label>
+      <input  type="text" name="driver" id="driver" class="form-control" value="{{ old('driver') }}" placeholder="Accident Driver"  >
+      @error('driver')
+      <span class="text-danger">{{ $message }}</span> 
+      @enderror
+   </div>
+</div>
+
+
 
 <div class="col-md-3">
    <div class="form-group">

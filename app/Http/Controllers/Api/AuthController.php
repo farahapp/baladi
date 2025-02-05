@@ -8,6 +8,8 @@ use App\Http\Requests\StoreUserRequestAPI;
 use App\Models\Deposit;
 use App\Models\DriversDeposit;
 use App\Models\Employee;
+use App\Models\Vechile_Traffic_Violations;
+use App\Models\VehicleAccident;
 use App\Traits\HttpResponses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -123,9 +125,15 @@ class AuthController extends Controller
         $user = $request->user();
         $deposit = DriversDeposit::where('driver_id',$user->id)->where("report_status",'0')->get();
 
+        $vehicle_accidents = VehicleAccident::where('vechile_driver',$user->id)->get();
+        $vechile_traffic_violations=Vechile_Traffic_Violations::where('vechile_driver',$user->id)->get();
+
+
         return response()->json(['access_token'=> $token,
-        'deposit'=>$deposit,
-        'user'=>$user],200);
+            'deposit'=>$deposit,
+            'vehicle_accidents'=>$vehicle_accidents,
+            'vechile_traffic_violations'=>$vechile_traffic_violations,
+            'user'=>$user],200);
         
     }
 
@@ -149,6 +157,9 @@ class AuthController extends Controller
             $user = Employee::where('baladi_id',$request->baladi_id)->first();
             $deposit = DriversDeposit::where('driver_id',$user->id)->where("report_status",'0')->get();
 
+            $vehicle_accidents = VehicleAccident::where('vechile_driver',$user->id)->get();
+            $vechile_traffic_violations=Vechile_Traffic_Violations::where('vechile_driver',$user->id)->get();
+
             
 
 
@@ -165,8 +176,10 @@ class AuthController extends Controller
              $token = $user->createToken('auth_token')->plainTextToken;
 
             return response()->json(['access_token'=> $token,
-                                    'deposit'=>$deposit,
-                                    'user'=>$user],200);
+            'deposit'=>$deposit,
+            'vehicle_accidents'=>$vehicle_accidents,
+            'vechile_traffic_violations'=>$vechile_traffic_violations,
+            'user'=>$user],200);
 
 
         }catch(\Exception $exception) {
