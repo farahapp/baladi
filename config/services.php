@@ -31,7 +31,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'firebase' => [
-        'key_path' => public_path(env('FIREBASE_CREDENTIALS')),
+        'key_path' => public_path("baladi-d7b5a-firebase-adminsdk-fbsvc-88764bc6c0.json"),
 
     ],
 
