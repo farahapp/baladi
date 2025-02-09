@@ -3,10 +3,10 @@
 Drivers data
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/alertify.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/alertifyjs/build/css/themes/bootstrap.min.css') }}">
 @endsection
 @section('contentheader')
 Housing List
@@ -104,7 +104,7 @@ show
                @foreach ( $data as $info )
                <tr>
                   <td>{{ $info->driver_name }}</td>
-                  <td><img src="{{ asset('/../assets/admin/uploads').'/'.$info->driver_photo }}"></td>
+                  <td><img src="{{ asset('assets/admin/uploads').'/'.$info->driver_photo }}"></td>
  
 
                      {{-- <td 
@@ -209,9 +209,9 @@ show
 </div>
 @endsection
 @section("script")
-<script  src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
-<script  src="{{ asset('/../assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
-<script src="{{ asset('/../assets/admin/js/housing.js') }}"></script>
+<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('assets/admin/plugins/alertifyjs/build/alertify.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/js/housing.js') }}"></script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

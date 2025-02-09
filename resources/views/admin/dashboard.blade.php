@@ -212,7 +212,7 @@ background-size:cover;">
 
 @section('script')
 <!-- ChartJS -->
-<script src="{{ asset('/../assets/admin/plugins/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('assets/admin/plugins/chart.js/Chart.min.js') }}"></script>
 
 
 <script>

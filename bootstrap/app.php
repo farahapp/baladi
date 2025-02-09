@@ -15,6 +15,10 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+// $app->bind('path.public', function() {
+//     return __DIR__;
+// });
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -51,5 +55,7 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+
+
 
 return $app;

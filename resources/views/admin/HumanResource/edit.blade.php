@@ -3,8 +3,8 @@
 Drivers Data
 @endsection
 @section("css")
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 @section('contentheader')
@@ -239,9 +239,9 @@ Modify
                         @if ($data['driver_pasport_image']!=null ||$data['driver_pasport_image']!="")
    
                         @if (pathinfo($data['driver_pasport_image'], PATHINFO_EXTENSION) == 'pdf')
-                        <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_pasport_image'] }}"></iframe><br/>
+                        <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_pasport_image'] }}"></iframe><br/>
                         @else
-                        <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_pasport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                        <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_pasport_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                         @endif
                         <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_pasport_image'] }}" style="width:50px;" value="driver_pasport_image">عرض </button>
                         @endif
@@ -315,9 +315,9 @@ Modify
                         @if ($data['sudanese_driving_license_Image']!=null ||$data['sudanese_driving_license_Image']!="")
    
                         @if (pathinfo($data['sudanese_driving_license_Image'], PATHINFO_EXTENSION) == 'pdf')
-                        <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}"></iframe><br/>
+                        <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}"></iframe><br/>
                         @else
-                        <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                        <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['sudanese_driving_license_Image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                         @endif
                         <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['sudanese_driving_license_Image'] }}" style="width:50px;" value="sudanese_driving_license_Image">عرض </button>
                         @endif
@@ -446,9 +446,9 @@ Modify
                      @if ($data['visa_image']!=null ||$data['visa_image']!="")
 
                      @if (pathinfo($data['visa_image'], PATHINFO_EXTENSION) == 'pdf')
-                     <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['visa_image'] }}"></iframe><br/>
+                     <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['visa_image'] }}"></iframe><br/>
                      @else
-                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['visa_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['visa_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                      @endif
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['visa_image'] }}" style="width:50px;" value="visa_image">عرض </button>
                      @endif
@@ -493,9 +493,9 @@ Modify
                      @if ($data['post_pay_pill_image']!=null ||$data['post_pay_pill_image']!="")
 
                      @if (pathinfo($data['post_pay_pill_image'], PATHINFO_EXTENSION) == 'pdf')
-                     <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}"></iframe><br/>
+                     <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}"></iframe><br/>
                      @else
-                     <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+                     <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['post_pay_pill_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
                      @endif
                      <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['post_pay_pill_image'] }}" style="width:50px;" value="post_pay_pill_image">عرض </button>
                      @endif
@@ -538,9 +538,9 @@ Modify
          @if ($data['no_objection_image']!=null ||$data['no_objection_image']!="")
 
          @if (pathinfo($data['no_objection_image'], PATHINFO_EXTENSION) == 'pdf')
-         <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['no_objection_image'] }}"></iframe><br/>
+         <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['no_objection_image'] }}"></iframe><br/>
          @else
-         <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['no_objection_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+         <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['no_objection_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
          @endif
          <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['no_objection_image'] }}" style="width:50px;" value="no_objection_image">Show</button>
          @endif
@@ -581,9 +581,9 @@ Modify
             @if ($data['old_qid_image']!=null ||$data['old_qid_image']!="")
    
             @if (pathinfo($data['old_qid_image'], PATHINFO_EXTENSION) == 'pdf')
-            <iframe  class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['old_qid_image'] }}"></iframe><br/>
+            <iframe  class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['old_qid_image'] }}"></iframe><br/>
             @else
-            <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['old_qid_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
+            <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['old_qid_image'] }}" alt=" صورة توقيع اقرار تسليم الجواز " ><br/>
             @endif
             <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['old_qid_image'] }}" style="width:50px;" value="old_qid_image">Show </button>
             @endif
@@ -636,7 +636,7 @@ Modify
                <label>   Driver's photo</label>
                <div class="image">
                   @if ($data['driver_photo']!=null ||$data['driver_photo']!="")
-                  <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                  <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_photo'] }}" alt="الصورة الشخصية للسائق" ><br/>
                   <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_photo'] }}" style="width:50px;" value="initial_contract_image">Show </button>
                   @endif
                   <button type="button" class="btn btn-sm btn-info" id="change_driver_photo" style="width:100px;" value="driver_photo" >Select image</button>
@@ -778,7 +778,7 @@ Modify
                <label>Driver Residency Id Image</label>
                <div class="image">
                   @if ($data['driver_residency_id_Image']!=null ||$data['driver_residency_id_Image']!="")
-                  <img class="custom_img" src="{{ asset('/../assets/admin/uploads').'/'.$data['driver_residency_id_Image'] }}" alt="الصورة الشخصية للسائق" ><br/>
+                  <img class="custom_img" src="{{ asset('assets/admin/uploads').'/'.$data['driver_residency_id_Image'] }}" alt="الصورة الشخصية للسائق" ><br/>
                   <button type="button" class="btn btn-sm btn-info showImageButton"  value="{{ $data['driver_residency_id_Image'] }}" style="width:50px;" value="driver_residency_id_Image">Show </button>
                   @endif
                   <button type="button" class="btn btn-sm btn-info" id="change_driver_residency_id_Image" style="width:100px;" value="driver_residency_id_Image" >Select image</button>
@@ -987,7 +987,7 @@ Modify
 
 
 @section("script")
-<script src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
    $('.select2').select2({

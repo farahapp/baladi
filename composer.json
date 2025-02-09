@@ -8,6 +8,7 @@
         "php": "^8.1",
         "doctrine/dbal": "^3.6",
         "fx3costa/laravelchartjs": "^3.0",
+        "google/auth": "^1.45",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.8",
         "laravel/sanctum": "^3.3",

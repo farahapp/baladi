@@ -546,8 +546,10 @@ public function add_vechile_spare_part($Vehicle_Maintenance_id,Request $request)
     if($request->ajax()){
         $com_code=auth()->user()->com_code;
         $Vechile_Information=get_cols_where_row(new Vechile_Information(),array("*"),array("id"=>$request->id,"com_code"=>$com_code));
+        $drivers= get_cols_where(new Employee(), array("*"), array("com_code" => $com_code), "id", "DESC");
+
        // echo $permission_roles_main_menus['permission_main_menues_id'];
-        return view('admin.Maintenance.load_add_traffic_violation',['Vechile_Information'=>$Vechile_Information]);
+        return view('admin.Maintenance.load_add_traffic_violation',['Vechile_Information'=>$Vechile_Information,'drivers'=>$drivers]);
   }
 }
 // ==================================================================================
@@ -563,6 +565,7 @@ public function add_traffic_violation($Vechile_Information_id,Request $request)
             return redirect()->back()->with(['error' => 'عفوا غير قادر للوصول الي البيانات المطلوبة']);
         }
     
+        $DataToInsert['vechile_driver']=$request->vechile_driver;
         $DataToInsert['traffic_violation_name']=$request->traffic_violation_name;
         $DataToInsert['traffic_violation_amount']=$request->traffic_violation_amount;
         $DataToInsert['date']=$request->date;
@@ -607,10 +610,12 @@ public function index_traffic_accidents()
     if($request->ajax()){
         $com_code=auth()->user()->com_code;
         $Vechile_Information=get_cols_where_row(new Vechile_Information(),array("*"),array("id"=>$request->id,"com_code"=>$com_code));
+        $drivers= get_cols_where(new Employee(), array("*"), array("com_code" => $com_code), "id", "DESC");
 
        
+       
        // echo $permission_roles_main_menus['permission_main_menues_id'];
-        return view('admin.Maintenance.load_add_traffic_accident',['Vechile_Information'=>$Vechile_Information]);
+        return view('admin.Maintenance.load_add_traffic_accident',['Vechile_Information'=>$Vechile_Information,'drivers'=>$drivers]);
   }
 }
 // ==================================================================================
@@ -622,7 +627,8 @@ public function add_traffic_accident($Vechile_Information_id,Request $request)
         if (empty($data)) {
             return redirect()->back()->with(['error' => 'عفوا غير قادر للوصول الي البيانات المطلوبة']);
         }
-    
+        
+        $DataToInsert['vechile_driver']=$request->vechile_driver;
         $DataToInsert['place']=$request->place;
         $DataToInsert['fault_person']=$request->fault_person;
         $DataToInsert['date']=$request->date;

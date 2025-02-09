@@ -1,7 +1,7 @@
 @if(@isset($Vechile_Information) and !@empty($Vechile_Information) )
 @section("css")
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2/css/select2.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/../assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 @endsection
 
 <form action="{{ route('Maintenance.add_traffic_violation',$Vechile_Information['id']) }}" method="post">
@@ -9,19 +9,28 @@
 <div class="row">
 
 
-   <div class="col-md-4">
+  
+
+   <div class="col-md-12">
       <div class="form-group">
-         <label>     violation Driver </label>
-         <input  type="text" name="driver" id="driver" class="form-control" value="{{ old('driver') }}" placeholder="violation Driver"  >
-         @error('driver')
-         <span class="text-danger">{{ $message }}</span> 
-         @enderror
+         <label>     Vehicle Driver </label>
+            <select name="vechile_driver" id="vechile_driver" class="form-control select2 ">
+               <option  value="">Select the vehicle driver</option>
+               @if (@isset($drivers) && !@empty($drivers))
+               @foreach ($drivers as $info )
+               <option @if(old('vechile_driver',$Vechile_Information->vechile_driver)==$info->id) selected="selected" @endif value="{{ $info->id }}"> {{ $info->driver_name }} </option>
+               @endforeach
+               @endif
+            </select>
+            @error('vechile_driver')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
       </div>
    </div>
 
 
-<div class="col-md-4">
-   <div class="form-group">
+   <div class="col-md-12">
+      <div class="form-group">
       <label>       violation Name  </label>
       <input  type="text" name="traffic_violation_name" id="traffic_violation_name" class="form-control" value="{{ old('traffic_violation_name') }}" placeholder="violation Name"  >
       @error('traffic_violation_name')
@@ -30,7 +39,7 @@
    </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-6">
    <div class="form-group">
       <label>     Violation Amount</label>
       <input  type="text" name="traffic_violation_amount" id="traffic_violation_amount" class="form-control" value="{{ old('traffic_violation_amount') }}" placeholder="Violation Amount"  >
@@ -42,7 +51,7 @@
 
 
 
-<div class="col-md-4">
+<div class="col-md-6">
    <div class="form-group">
       <label>       Violation Date  </label>
       <input  type="date" name="date" id="date" class="form-control" value="{{ old('date') }}" placeholder="Violation Date"  >
@@ -64,7 +73,7 @@
 </div> --}}
 
 
-<div class="col-md-3">
+<div class="col-md-6">
    <div class="form-group">
       <label>       Payment Status  </label>
       <select  name="traffic_violation_payment_status" id="traffic_violation_payment_status" class="form-control">
@@ -88,7 +97,7 @@
 @else
 <p class="bg-danger text-center"> Sorry, there is no data to display.</p>
 @section("script")
-<script  src="{{ asset('/../assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
+<script  src="{{ asset('assets/admin/plugins/select2/js/select2.full.min.js') }}"> </script>
 <script>
    //Initialize Select2 Elements
 
